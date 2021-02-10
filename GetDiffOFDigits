@@ -3,7 +3,7 @@ namespace FactConsoleApp3
 {
     class Program
     {
-        public static int GetDiffOFDigits(int num)
+        public static int GetDiffOfDigits(int num)
         {
             if (num > 99)
             {
@@ -22,9 +22,9 @@ namespace FactConsoleApp3
         
         static void Main(string[] args)
         {
-            Console.WriteLine(GetDiffOFDigits(1));
-            Console.WriteLine(GetDiffOFDigits(-1));
-            Console.WriteLine(GetDiffOFDigits(100));
+            Console.WriteLine(GetDiffOfDigits(1));
+            Console.WriteLine(GetDiffOfDigits(-1));
+            Console.WriteLine(GetDiffOfDigits(100));
         }
 
     }
