@@ -1,0 +1,30 @@
+namespace FactConsoleApp3
+{
+    class Program
+    {
+        public static int GetSumOFDigits(int num)
+        {
+            if (num > 99)
+            {
+                return -2;
+            }
+            if (num < 0)
+            {
+                return -3;
+            }
+            if(num>=0&&num<=0)
+                {
+                return -1;
+                }
+            return num % 10 + num / 10;
+        }
+        
+        static void Main(string[] args)
+        {
+            Console.WriteLine(GetSumOFDigits(33));
+            Console.WriteLine(GetSumOFDigits(55));
+            Console.WriteLine(GetSumOFDigits(100));
+        }
+
+    }
+}
