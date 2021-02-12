@@ -1,0 +1,22 @@
+
+namespace mxConsoleApp3
+{
+    class Class1
+    {
+        public void Sum(int num1, int num2)
+        {
+            Console.WriteLine(num1+num2);
+        }
+        public void Sum(float num1, float num2)
+        {
+            Console.WriteLine(num1+num2);
+        }
+        static void Main(string[] args)
+        {
+            Class1 P = new Class1();
+            P.Sum(10,20);
+            P.Sum(2.5f, 5.5f);
+        }
+    }
+   
+}
