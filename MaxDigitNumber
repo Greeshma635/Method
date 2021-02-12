@@ -1,0 +1,66 @@
+namespace mxConsoleApp3
+{
+    class Program
+    {
+        public static int GetMaxNumber(int[] array)
+        {
+            return ArrayToNum(SortarrayDesc(GetMaxDigitArray(array)));
+        }
+
+        public static int ArrayToNum(int[]array)
+        {
+            int res = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                res = res * 10 + array[i];
+            }
+            return res;
+        }
+        public static int[] SortarrayDesc(int[] array)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                for (int j = i+1; j < array.Length; j++)
+                {
+                    if (array[i] < array[j])
+                    {
+                       int copy = array[i];
+                        array[i] = array[j];
+                        array[j] = copy;
+                    }
+                }
+            }
+            return array;
+        }
+
+        public static int[] GetMaxDigitArray(int[] array)
+        {
+            int[] mxdigitarray = new int[array.Length];
+            for (int i = 0; i < array.Length; i++)
+            {
+                mxdigitarray[i] = GetMaxDigit(array[i]);
+            }
+            return mxdigitarray;
+        }
+        public static int GetMaxDigit(int num)
+        {
+            int max = num % 10;
+            while (num > 0)
+            {
+                int digit = num % 10;
+                if (max < digit)
+                {
+                    max = digit;
+                }
+                num /= 10;
+            }
+            return max;
+        }
+
+        static void Main(string[] args)
+        {
+            int[] array = { 345, 412, 845, 958, 567,1634 };
+            Console.WriteLine(GetMaxNumber(array));
+        }
+    }
+}
