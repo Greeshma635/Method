@@ -1,0 +1,38 @@
+namespace ConsoleApp3
+{
+    class Methodoverri
+    {
+        class parent
+        {
+            public void Display()
+            {
+                Console.WriteLine(" this is display method for class parent");
+            }
+            public virtual void Show()
+            {
+                Console.WriteLine(" this is show method for class parent");
+            }
+        }
+        class child:parent
+
+            {
+              public override void Show()
+              {
+                   Console.WriteLine(" this is show method for class child");
+              }
+            }
+        class MethoOverride
+        {
+            static void Main(string[] args)
+            {
+                parent p = new parent();
+                p.Show();
+                p = new child();
+                p.Show();
+            }
+        }
+           
+
+
+    }
+}
