@@ -1,0 +1,26 @@
+
+namespace arrayConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList namelist = new ArrayList();
+            namelist.Add("Munny");
+            namelist.Add("sony");
+            namelist.Add("bunnu");
+            namelist.Add("John");
+            foreach (string s in namelist)
+            {
+                Console.WriteLine(s);
+            }
+            namelist.Sort();
+            namelist.Reverse();
+            Console.WriteLine("Elements are after sorting");
+            foreach (string s in namelist)
+            {
+                Console.WriteLine(s);
+            }
+        }
+    }
+}
