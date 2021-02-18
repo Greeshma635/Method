@@ -1,0 +1,46 @@
+namespace ConsoleApp4
+{
+    class Sortedset
+    {
+        class doctor : IComparable<doctor>
+        {
+            public int doctorid { set; get; }
+            public string doctorname { set; get; }
+            public int doctorfee { set; get; }
+
+            public int CompareTo(doctor other)
+            {
+                if (this.doctorid <other.doctorid)
+                {
+                    return -1;
+                }
+                if (this.doctorid >other.doctorid)
+                {
+                    return 1;
+                }
+                return 0;
+            }
+            public override string ToString()
+            {
+                return $"{doctorid}\t{doctorname}\t{doctorfee}";
+            }
+
+
+            static void Main(string[] args)
+            {
+                SortedSet<doctor> doctorset = new SortedSet<doctor>();
+
+                doctorset.Add(new doctor() { doctorid = 210, doctorname = "Swarupa", doctorfee = 2000 });
+                doctorset.Add(new doctor() { doctorid = 211, doctorname = "pavan", doctorfee = 5000 });
+                doctorset.Add(new doctor() { doctorid = 205, doctorname = "sneha", doctorfee = 1000 });
+
+                foreach (doctor dc in  doctorset)
+
+                {
+                    Console.WriteLine(dc);
+                }
+            }
+        }
+    }
+
+}
